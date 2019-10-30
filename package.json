@@ -1,0 +1,12 @@
+{
+  "name": "pxl",
+  "version": "1.0.0",
+  "description": "First project",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint",
+    "start": "node index.js"
+  },
+  "author": "PXL",
+  "license": "ISC"
+}
