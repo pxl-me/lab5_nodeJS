@@ -1,0 +1,331 @@
+#content{
+
+    display: grid;
+
+    grid-template-columns: auto auto auto;
+
+    grid-template-rows: auto auto auto auto;
+
+    padding: 10px;
+
+    grid-gap: 10px;
+
+}
+
+
+
+H1{
+
+    grid-column: 1/span 2;
+
+    padding-left: 10px;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    font-weight: normal;
+
+    color: grey;
+
+    font-style: italic;
+
+}
+
+
+
+#menu{
+
+    padding-right: 10px;
+
+}
+
+
+
+#menu li{
+
+    float: right;
+
+    display: block;
+
+    position: relative;
+
+    margin-right: 20px;
+
+    margin-top: 25px;
+
+}
+
+
+
+#menu li a{
+
+
+
+    color: grey;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    font-weight: normal;
+
+    font-size: 20px;
+
+    text-decoration: none;
+
+}
+
+
+
+.post{
+
+    grid-column: 1/span 3;
+
+    border-top: 1px solid lightgray;
+
+    border-bottom: 1px solid lightgray;
+
+}
+
+
+
+#footer{
+
+    grid-column: 1/span 3;
+
+    position: fixed;
+
+    bottom: 0px;
+
+    border-top: 1px solid lightgray;
+
+    background-color: white;
+
+    width:100%;
+
+}
+
+
+
+.post{
+
+    display: grid;
+
+    grid-template-columns: 30% auto;
+
+    grid-template-rows: 100%;
+
+    padding: 10px;
+
+    grid-gap: 10px;
+
+}
+
+
+
+.details > H2 > a{
+
+    color: rgb(200, 0, 0);
+
+    font-size: 50px;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    font-weight: normal;
+
+    text-decoration: none;
+
+}
+
+
+
+.details>h2>a:hover{
+
+    color: coral;
+
+}
+
+
+
+.details>p>a:hover{
+
+    color: coral;
+
+}
+
+
+
+#content>ul>li>a:hover{
+
+    color:coral;
+
+}
+
+
+
+.info{
+
+    color: lightgray;
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+
+
+.info > a{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    font-weight: normal;
+
+    text-decoration: none;
+
+    border-bottom: 1px dashed lightgray;
+
+    color: gray;
+
+}
+
+
+
+.body{
+
+    padding-left: 10px;
+
+    border-left: 1px solid lightgrey;
+
+}
+
+
+
+.body>p{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    color: gray;
+
+}
+
+
+
+.col>h3>a{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    font-weight: normal;
+
+    font-size: 30px;
+
+    color: black;
+
+    text-decoration: none;
+
+}
+
+
+
+.col>p{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    color: gray;
+
+}
+
+
+
+.col>p>a:hover{
+
+    color: coral;
+
+}
+
+
+
+.det>a{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    font-weight: normal;
+
+    color: rgb(200, 0, 0);
+
+    text-decoration: none;
+
+}
+
+
+
+#footer>p{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    color: lightgray;
+
+}
+
+
+
+#footer>p>a{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    font-weight: normal;
+
+    color: rgb(200, 0, 0);
+
+    text-decoration: none;
+
+}
+
+
+
+#footer>p>a:hover{
+
+    color: coral;
+
+}
+
+
+
+  
+
+@media screen and (max-width: 1000px){
+
+    H1{
+
+        grid-column: 1/span 3;
+
+    }
+
+
+
+    #menu{
+
+        grid-column: 1/span 3;
+
+    }
+
+
+
+    .post{
+
+        grid-template-columns: 100%;
+
+        grid-template-rows: auto auto;
+
+    }
+
+    .body{
+
+        padding-left: 0px;
+
+        border-left: 0px;
+
+    }
+
+    .col{
+
+        grid-column: 1/span 3;
+
+    }
+
+}
