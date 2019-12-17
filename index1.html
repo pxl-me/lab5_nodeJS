@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title>Deploying 1</title>
+
+	<script>
+
+		function amount(t)
+
+		{
+
+			text = t + " ";
+
+			if (text == " ") {
+
+				alert(0);
+
+				return;
+
+			}
+
+			var c = 0;
+
+			if (text.charAt(0) == " ") c--;
+
+			for (var i = 0; i <= text.length; i++) {
+
+				if (text.charAt(i) == " ") c++;
+
+				if (text.charAt(i - 1) == " " && text.charAt(i) == " ") c--;
+
+			}
+
+			alert(c);
+
+		}
+
+
+
+		function repl(t1, t2, t3, data)
+
+		{
+
+			var text = t3 + " ";
+
+			var wit = t1;
+
+			var nw = t2;
+
+			var i = 0,
+
+			c_c = 0,
+
+			n_w = 0,
+
+			s = "";
+
+			while (i <= text.length - 1) {
+
+				if (text.charAt(i) != " ") {
+
+					c_c++;
+
+					i++;
+
+					continue;
+
+				}
+
+				if (text.charAt(i) == " ") {
+
+					if (text.substr(n_w, c_c) == wit) {
+
+						s += nw + " ";
+
+					} else {
+
+						s += text.substr(n_w, c_c) + " ";
+
+					}
+
+					n_w = i + 1;
+
+					c_c = 0;
+
+					i++;
+
+				}
+
+			}
+
+			alert(s);
+
+		}
+
+
+
+		function space(t, data1)
+
+		{
+
+			data1.value = "Текст после замены" + "\n" + t.replace( /  +/g, ' ' );
+
+		}
+
+	</script>
+
+</head>
+
+<body>
+
+	<hr>
+
+	<p>1. Найти кол-во слов в тексте</p>
+
+	<form name="form1">
+
+		Вставте текст<br>	
+
+		<input type="text" name="txt"><br>
+
+		<input type="button"  value="Find" onClick="amount(txt.value)"><br><br>
+
+	</form>
+
+	<hr>
+
+
+
+	<p>2. Замена слов в тексте</p>
+
+	<form name="form2">
+
+		Вставте слово для замены<br>	
+
+		<input type="text" name="txt1"><br>
+
+		Вставте слово, которым заменить<br>	
+
+		<input type="text" name="txt2"><br>
+
+		Вставте текст<br>	
+
+		<input type="text" name="txt3"><br>
+
+		<textarea name="data" cols=40 rows=7>
+
+		</textarea><br>		
+
+		<input type="button" value="Find" onClick="repl(txt1.value, txt2.value, txt3.value, data)"><br><br>
+
+	</form>
+
+	<hr>
+
+	
+
+	<p>3. Убрать лишние пробелы</p>
+
+	<form name="form3">
+
+		Вставте текст<br>	
+
+		<input type="text" name="txt4"><br>
+
+		<textarea name="data1" cols=40 rows=7>
+
+		</textarea><br>		
+
+		<input type="button" value="Find" onClick="space(txt4.value, data1)"><br><br>
+
+	</form>
+
+	<hr>
+
+</body>
+
+</html>
